@@ -22,14 +22,18 @@ layout: default
 title: "tagged: #{tag}"
 syntax-highlighting: yes
 ---
-  <h1 class="title">#{tag}</h1>
-  {% for post in site.posts %}
-		{% for tag in post.tags %}
-			{%if tag == "#{tag}" %}
-				{%include post.html%}
-			{%endif%}
-		{%endfor%}
-  {% endfor %}
+  <div id="archive">
+    <h1 class="title">Archive for <span class="archive-title">#{tag}</span></h1>
+    <div id="items">
+      {% for post in site.posts %}
+		    {% for tag in post.tags %}
+			    {%if tag == "#{tag}" %}
+				    {%include post.html%}
+			    {%endif%}
+		    {%endfor%}
+      {% endfor %}
+    </div>
+  </div>
 HTML
 
     FileUtils.mkdir_p("tags/#{tag}")
