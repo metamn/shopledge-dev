@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+      <loc>http://dev.shopledge.com/</loc>
+      <lastmod>2011-01-13</lastmod>
+  </url>
+  <url>
+      <loc>http://dev.shopledge.com/tags/tag2/</loc>
+      <lastmod>2011-01-13</lastmod>
+  </url>
+  <url>
+      <loc>http://dev.shopledge.com/tags/tag1/</loc>
+      <lastmod>2011-01-13</lastmod>
+  </url>
+  <url>
+      <loc>http://dev.shopledge.com/2011/01/13/responsive-web-design</loc>
+      <lastmod>2011-01-13</lastmod>
+  </url>
+  <url>
+      <loc>http://dev.shopledge.com/2011/01/12/the-easiest-way-to-blog</loc>
+      <lastmod>2011-01-12</lastmod>
+  </url>
+  <url>
+      <loc>http://dev.shopledge.com/2011/01/11/contact</loc>
+      <lastmod>2011-01-11</lastmod>
+  </url>
+</urlset>
