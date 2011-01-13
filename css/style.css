@@ -156,6 +156,13 @@ a:visited {
 }
 
 
+/* Google Custom Search
+*/
+
+td.gsc-search-button {
+  width: 10% !important;
+}
+
 
 /* Common 
 */
