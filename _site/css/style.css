@@ -1,0 +1,171 @@
+/* Grid
+*/
+
+.container {
+  width: 45%;
+  max-width: 40em;  /* 1. 40x16=640px */
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Typography
+
+- base measure for vertical rhythm: 1.25em
+*/
+
+body { font-size:100%; line-height:1.25; }
+h1, h2, h3 { margin-top:0; margin-bottom:0; }
+h1 { font-size:1.55556em; padding:1.38415em 0; }
+h2 { font-size:1.33333em; padding:1.25em 0; }
+h3 { font-size:1.22222em; padding:1.42074em 0; }
+h4 { font-size:1.11111em; padding:1.62469em 0; }
+h5, h6 { font-size:1em; padding:1.25em 0; }
+
+h6 {
+  font-style: italic;
+}
+h1, h2, h3 {
+  font-weight: normal;
+}
+body {   
+  font-size: 100%;
+  -webkit-text-size-adjust: none;  
+}
+p {
+  margin-bottom: 1.25em;
+}
+
+
+/* Theme
+
+- background: #f9f9f9;
+- 
+*/
+
+a h1 {
+  color: #000;
+}
+
+
+
+
+
+/* Header 
+*/
+
+#header {
+  text-align: center;
+}
+#header #description {
+  font-style: italic;
+}
+
+
+/* Footer
+*/
+
+#footer #inside {
+  margin: 2.5em 0;
+  padding: 1.25em 0;
+  border-top: 1px solid #ddd;
+}
+#footer .col-1, #footer .col-2 {
+  width: 45%;
+}
+#footer .col-1 {
+  margin-right: 5%;
+}
+#footer .col-2 {
+  margin-left: 5%;
+}
+
+
+/* Start page
+*/
+
+#startpage {
+  margin: 2.5em 0;
+}
+#startpage #item {
+  margin: 1.25em 0;
+  padding: 1.25em 0;
+}
+#startpage #item.odd {
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+#startpage #item .excerpt, #startpage #item .image {
+  margin: 1.25em 0 .62em 9.5em;
+}
+.meta {
+  font-style: italic;
+  color: #999;
+}
+
+
+
+/* Article
+*/
+
+#article, #related {
+  background: #f9f9f9;
+  padding: 1.25em;
+}
+#article .meta {
+  padding-bottom: .62em;
+  border-bottom: 1px inset #555;
+}
+#article .body {
+  margin: 2.5em 0;
+}
+
+
+
+/* Common 
+*/
+
+.link {
+  cursor: pointer;
+}
+.clear {
+  clear: both;
+}
+.block {
+  width: 100%;
+  float: left;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.hidden {
+  display: none;
+}
+.alignright {
+  text-align: right;
+}
+.alignleft {
+  text-align: left;
+}
+.aligncenter {
+  text-align: center;
+}
+
+ul.inline-list {
+  display: block;
+  margin: 0;
+}
+ul.inline-list li {
+  display: inline;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowarp;  
+}
+

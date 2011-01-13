@@ -1,0 +1,20 @@
+<div id="items">
+  {% for post in site.posts %}
+    <div id="item" class="{% cycle 'even', 'odd' %}">
+      <div class="title">
+        <span class="date">{{ post.date }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      </div>
+      {% if post.excerpt %}
+        <div class="excerpt meta">
+          {{ post.excerpt }}
+        </div>
+      {% endif %}
+      {% if post.image %}
+      <div class="image">
+        <a href="{{ post.url }}" title="{{ post.title }}">
+          <img src="../images/{{ post.image }}" alt="{{ post.title }}"/></a>
+      </div>
+      {% endif %}
+    </div>
+  {% endfor %}  
+</div>
