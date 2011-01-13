@@ -1,0 +1,13 @@
+---
+layout: default
+title: "tagged: tag2"
+syntax-highlighting: yes
+---
+  <h1 class="title">tag2</h1>
+  {% for post in site.posts %}
+		{% for tag in post.tags %}
+			{%if tag == "tag2" %}
+				{%include post.html%}
+			{%endif%}
+		{%endfor%}
+  {% endfor %}
