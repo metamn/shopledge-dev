@@ -7,7 +7,7 @@
   margin: 0 auto;
 }
 
-img {
+#article .body img, #item img {
   width: 100%;
   height: auto;
 }
@@ -154,6 +154,8 @@ a:visited {
 #article .body {
   margin: 2.5em 0;
 }
+
+
 
 
 /* Google Custom Search

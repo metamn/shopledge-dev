@@ -1,6 +1,6 @@
 <div id="item" class="{% cycle 'even', 'odd' %}">
   <div class="title">
-    <span class="date">{{ post.date }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    <span class="date">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
   </div>
   {% if post.excerpt %}
     <div class="excerpt meta">
