@@ -5,9 +5,17 @@ layout: default
 <div id="post">
   <h1> {{ page.title }} </h1>
     
-  <div class="body">
+  <div class="meta">
     <ul>
-      <li> {{ page.date }} </li>
+      <li class="date"> {{ page.date }} </li>
+      <li class="tags">
+        {% for tag in page.tags %}
+          <a href="/tags/{{ tag }}/index.html">{{ tag }}</a>
+          {% unless forloop.last %}
+          ,
+          {% endunless %} 
+        {% endfor %}
+      </li>
     </ul>
   </div>
     
