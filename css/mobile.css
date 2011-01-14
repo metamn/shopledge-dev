@@ -6,3 +6,7 @@
 #item .excerpt, #item .image {
   margin-left: 0.62em !important;
 }
+
+h1.title {
+  padding-top: 0 !important;
+}
