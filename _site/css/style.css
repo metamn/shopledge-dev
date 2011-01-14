@@ -61,8 +61,9 @@ a h1 {
   color: #2d2d2d;
   text-decoration: none;
 }
-#article, #related {
-  background: #f1f1f1;  
+#article, #related, #comments {
+  background: #f1f1f1; 
+  padding: 1.25em; 
 }
 #item.odd {
   background: #f1f1f1;
@@ -144,15 +145,16 @@ a:visited {
 /* Article
 */
 
-#article, #related {
-  padding: 1.25em;
-}
+
 #article .meta {
   padding-bottom: .62em;
   border-bottom: 1px inset #555;
 }
 #article .body {
   margin: 2.5em 0;
+}
+#article .excerpt {
+  margin-top: .62em; 
 }
 
 
