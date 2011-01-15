@@ -156,8 +156,16 @@ a:visited {
 #article .excerpt {
   margin-top: .62em; 
 }
-
-
+.fb_edge_widget_with_comment {
+  top: -0.24em;
+}
+#related ul.posts {
+  margin-left: 5%;
+  list-style-type: circle;
+}
+#related ul.posts li {
+  margin-bottom: 2.5%;
+}
 
 
 /* Google Custom Search
