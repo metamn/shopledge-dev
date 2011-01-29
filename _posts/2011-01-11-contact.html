@@ -2,19 +2,13 @@
 id: 20110111
 layout: post
 type: page
-title: Contact
+title: Contact, Archives and More
 date: 11 January 2011
-tags:
-  - tag1
-  - tag2
 excerpt: dev [at] shopledge.com or @shopledge on Twitter
 ---
 
-<p>
-  text here
-</p>
 
-<h3>Search</h3>
+<h2>Search</h2>
 <div id="cse" style="width: 100%;">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript">
@@ -133,4 +127,65 @@ excerpt: dev [at] shopledge.com or @shopledge on Twitter
   }
 </style>
 
-      
+
+
+
+<h2>Archives</h2>
+<p>
+  Browse articles <a href="#date">by date</a>, <a href="#tag">by subject</a> or <a href="#images">by images</a>.
+  <br/>
+  Also check out the <a href="#links">links</a> we like and <a href="#people">people</a> we learn from.
+</p>
+
+<div id="smooth-links">
+
+  <h3 id="date">Articles by date</h3>
+  <ol class="date">
+  {% for post in site.posts %}
+    <li>
+      <span class="date">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+  </ol>
+
+  <h3 id="tag">Tag archives</h3>
+  {% for tag in site.tags %}
+    <a href="/tags/{{ tag[0] }}/">{{ tag[0] }}</a>,
+  {% endfor %}
+
+  <h3 id="links">Links</h3>
+  <ul>     
+    {% for post in site.posts %}
+      {% for link in post.links %}
+        <li>{{ link.title }} # <a href="{{ link.url }}" title="{{ link.title }}">{{ link.url }}</a></li>
+      {% endfor %}
+    {% endfor %}
+  </ul>
+
+  <h3 id="people">People</h3>
+  <ul>     
+    {% for post in site.posts %}
+      {% for person in post.people %}
+        <li>{{ person.name }} # <a href="{{ person.url }}" title="{{ person.name }}">{{ person.url }}</a></li>
+      {% endfor %}
+    {% endfor %}
+  </ul>      
+
+  <h3 id="images">Images</h3>
+  <div id="image-archive">     
+    {% for post in site.posts %}
+      {% for image in post.images %}
+        <div id="item" class="left {% cycle 'even', 'odd' %}">
+          <a href="{{ post.url }}" title="{{ post.title }}">
+            <img src="/images/{{ image.url }}" alt="{{ image.title }}" />
+            <br/>
+            <span class="title">{{ image.title}}</span>
+          </a>
+        </div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div> <!-- smooth links -->
+
+<div id="spacer">
+</div>

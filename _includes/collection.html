@@ -1,5 +1,5 @@
 <div id="items">
-  {% for post in site.posts %}
+  {% for post in site.posts limit:10 %}
     <div id="item" class="{% cycle 'even', 'odd' %}">
       <div class="title">
         <span class="date">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
@@ -9,10 +9,10 @@
           {{ post.excerpt }}
         </div>
       {% endif %}
-      {% if post.image %}
+      {% if post.images %}
       <div class="image">
         <a href="{{ post.url }}" title="{{ post.title }}">
-          <img src="../images/{{ post.image }}" alt="{{ post.title }}"/></a>
+          <img src="../images/{{ post.images[0].url }}" alt="{{ post.title }}"/></a>
       </div>
       {% endif %}
     </div>

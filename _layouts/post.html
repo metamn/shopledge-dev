@@ -11,7 +11,7 @@ layout: default
       <li class="date"> Posted {{ page.date | date_to_string }} </li>
       <li class="tags"> in 
         {% for tag in page.tags %}
-          <a href="/tags/{{ tag }}/index.html">{{ tag }}</a>
+          <a href="/tags/{{ tag }}/">{{ tag }}</a>
           {% if forloop.last %}
           #
           {% else %}
@@ -32,12 +32,32 @@ layout: default
     {{ content }}
   </div>
   
-  <div class="share">
-    <h2>Share this post</h2>
-    <a href="http://twitter.com/share?url={{site.url}}{{page.url}}" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like layout="button_count" show_faces="false" width="450"></fb:like>
+  <div class="meta">
+    {% if page.links  %}
+    <h4>Links used in this article</h4>
+    <ol>      
+      {% for link in page.links %}
+        <li>{{ link.title }} # <a href="{{ link.url }}" title="{{ link.title }}">{{ link.url }}</a></li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+    
+    {% if page.people  %}
+    <h4>People mentioned in this article</h4>
+    <ol>      
+      {% for person in page.people %}
+        <li>{{ person.name }} # <a href="{{ person.url }}" title="{{ person.name }}">{{ person.url }}</a></li>
+      {% endfor %}
+    </ol>
+    {% endif %}
   </div>
- 
+  
+</div>
+
+<div id="share">
+  <h2>Share this post</h2>
+  <a href="http://twitter.com/share?url={{site.url}}{{page.url}}" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+  <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like layout="button_count" show_faces="false" width="450"></fb:like>
 </div>
 
 {% unless page.type == 'page' %}  
