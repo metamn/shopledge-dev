@@ -1,14 +1,14 @@
 ---
 layout: default
-title: "tagged: tag1"
+title: "tagged: trends"
 syntax-highlighting: yes
 ---
   <div id="archive">
-    <h1 class="title">Archive for <span class="archive-title">tag1</span></h1>
+    <h1 class="title">Archive for <span class="archive-title">trends</span></h1>
     <div id="items">
       {% for post in site.posts %}
 		    {% for tag in post.tags %}
-			    {%if tag == "tag1" %}
+			    {%if tag == "trends" %}
 				    {%include post.html%}
 			    {%endif%}
 		    {%endfor%}
