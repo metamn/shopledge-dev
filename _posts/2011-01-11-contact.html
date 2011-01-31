@@ -154,7 +154,7 @@ excerpt: dev [at] shopledge.com or @shopledge on Twitter
   {% endfor %}
 
   <h3 id="links">Links</h3>
-  <ul>     
+  <ul class="links">     
     {% for post in site.posts %}
       {% for link in post.links %}
         <li>{{ link.title }} # <a href="{{ link.url }}" title="{{ link.title }}">{{ link.url }}</a></li>
@@ -163,7 +163,7 @@ excerpt: dev [at] shopledge.com or @shopledge on Twitter
   </ul>
 
   <h3 id="people">People</h3>
-  <ul>     
+  <ul class="links">     
     {% for post in site.posts %}
       {% for person in post.people %}
         <li>{{ person.name }} # <a href="{{ person.url }}" title="{{ person.name }}">{{ person.url }}</a></li>

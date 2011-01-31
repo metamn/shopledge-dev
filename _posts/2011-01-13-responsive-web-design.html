@@ -86,11 +86,11 @@ people:
 </p>
 
 <p>
-  It sounds good to use differently sized (in KB) images for desktop and mobile. You save bandwith and rendering time.
+  It sounds good to use differently sized (in KB) images for desktop and mobile. You save bandwith and download time.
 </p>
 
 <p>
-  Perhaps everybody uploads different sizes for an image &mdash thumbnail, medium, large &mdash by default. 
+  Probably everybody is already uploading different sizes for images &mdash thumbnail, medium, large &mdash by default. 
   <br/>
   <br/>
   So it remains to detect run-time &mdash with Javascript and cookies &mdash which image size to use for different displays.
@@ -101,18 +101,28 @@ people:
 
 <h3>An example</h3>
 <p>
-  This very blog uses this technique to stay responsive.
+  This very blog uses the responsive technique to stay mobile.
   </br>
-  You can check it's source code at <a href="{{ page.links[4].url }}" title="{{ page.links[4].title }}">GitHub</a>.
+  There are three steps to follow:
+  <ol>
+    <li>
+      Tell the browser to reset the viewport.
+      <br/>
+      <script src="https://gist.github.com/803971.js?file=responsive.html"></script>
+    </li>
+    <li>
+      Load the mobile.css when necessary
+      <br/>
+      <script src="https://gist.github.com/804170.js?file=mobile.html"></script>
+    </li>  
+    <li>
+      Create the mobile.css.
+    </li>
+  </ol>
+  You can check the source code at <a href="{{ page.links[4].url }}" title="{{ page.links[4].title }}">GitHub</a>.
 </p>
 
-<p>
-  The only trick not mentioned in Ethan's article is to include the following line in your site's header.
-</p>
-
-<script src="https://gist.github.com/803971.js?file=responsive.html"></script>
-
-<p>
-  To see all above in action please visit <a href="http://shopledge.com" title="shopledge.com">our parent site</a> and try to
+<h6>
+  To see responsive web design in full action please visit <a href="http://shopledge.com" title="shopledge.com">our parent site</a> and try to
   resize your browser.
-</p>
+</h6>
