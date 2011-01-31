@@ -72,6 +72,10 @@ a h1 {
   font-style: italic;
   color: #9c9c9c;
 }
+.links a, .links a:active, .links a:hover, .links a:visited {
+  color: #6b6bf0;
+  font-size: smaller;
+}
 a, a:active, a:hover {
   color: #00e;
   text-decoration: none !important;

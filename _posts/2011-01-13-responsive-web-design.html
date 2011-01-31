@@ -4,11 +4,115 @@ layout: post
 title: Responsive Web Design
 date: 13 January 2011
 tags:
-  - tag1
-  - tag2
+  - trends
+  - mobile
+  - responsive web design
+  - css media query
+  - flexible grid
+  - design
+excerpt: 2011 is about websites becoming responsive for the different devices people use to access them.
+links:
+  # 0
+  - title: Web Design Predictions for 2011
+    url: http://www.webdesignerdepot.com/2011/01/web-design-predictions-for-2011/
+  # 1
+  - title: Responsive design is the new black
+    url: http://www.zeldman.com/2010/06/23/responsive-design-is-the-new-black/
+  # 2
+  - title: A List Apart
+    url: http://alistapart.com
+  # 3
+  - title: Responsive Web Design
+    url: http://www.alistapart.com/articles/responsive-web-design
+  # 4
+  - title: The Source Code of this Blog
+    url: https://github.com/rubycs/shopledge-dev
+people:
+  # 0
+  - name: Ethan Marcotte
+    url: http://ethanmarcotte.com/
+  # 1
+  - name: Jeffrey Zeldman
+    url: http://zeldman.com
 ---
 
+<h2>The Short History of Responsive Web Design</h2>
 <p>
-  text here
+  <a href="{{ page.people[0].url }}" title="{{ page.people[0].name }}">{{ page.people[0].name }}</a> in 
+  <a href="{{ page.links[2].url }}" title="{{ page.links[2].title }}">{{ page.links[2].title }}</a> article, back in May 2010 opened my eyes about
+  a new, and in the same time old technology capable to produce web sites compatible with various displays like 
+  desktop monitors, tablets, smartphones and smaller mobile devices.   
+</p> 
+
+<p>
+  After reading <a href="{{ page.links[3].url }}" title="{{ page.links[3].title }}">the article</a> I was surprised how
+  straightforward and <em>easy</em> is to create responsive web sites.
 </p>
 
+<p>
+  You just have to use elastic measures (<b>em, %</b>) in your CSS and add two lines of code in your HTML.
+  There is a simple magic formula how to size design elements relatively to the current display resolution and that's all,
+  the rest is done by the modern browser.
+</p>
+
+<p>
+  A few months later 
+  <a href="{{ page.people[1].url }}" title="{{ page.people[1].name }}">{{ page.people[1].name }}</a>
+  the grandpa of all web designers stated 
+  <a href="{{ page.links[1].url }}" title="{{ page.links[1].title }}">{{ page.links[1].title }}</a>
+  so I was sure I'm on the right track.
+</p>
+
+<p>
+  With the <a href="{{ page.links[0].url }}" title="{{ page.links[0].title }}">{{ page.links[0].title }}</a>
+  Responsive Web Design got full respect and support from the designer elite.
+</p>
+
+<p>
+  So please forget responsiveness is not the <em>silver bullet</em> &mdash; just flow with the opinion leaders. 
+</p>
+
+<p>
+  And do not trust ideas like <em>"Mobile Web Design in the Rails Way"</em> &mdash web development frameworks are
+  opinionated about development not about design.
+</p>
+
+<h2>Yes, The Images</h2>
+
+<p>
+  CSS media queries and the flexible grid &mdash the foundation for responsiveness &mdash are dealing with the 
+  <em>display size</em> of the HTML elements in a webpage and <em>not</em> with the size of images in kilobytes 
+  to be downloaded.
+</p>
+
+<p>
+  It sounds good to use differently sized (in KB) images for desktop and mobile. You save bandwith and rendering time.
+</p>
+
+<p>
+  Perhaps everybody uploads different sizes for an image &mdash thumbnail, medium, large &mdash by default. 
+  <br/>
+  <br/>
+  So it remains to detect run-time &mdash with Javascript and cookies &mdash which image size to use for different displays.
+</p>
+
+<script src="https://gist.github.com/803966.js?file=responsive.js"></script>
+
+
+<h3>An example</h3>
+<p>
+  This very blog uses this technique to stay responsive.
+  </br>
+  You can check it's source code at <a href="{{ page.links[4].url }}" title="{{ page.links[4].title }}">GitHub</a>.
+</p>
+
+<p>
+  The only trick not mentioned in Ethan's article is to include the following line in your site's header.
+</p>
+
+<script src="https://gist.github.com/803971.js?file=responsive.html"></script>
+
+<p>
+  To see all above in action please visit <a href="http://shopledge.com" title="shopledge.com">our parent site</a> and try to
+  resize your browser.
+</p>

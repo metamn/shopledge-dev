@@ -32,12 +32,12 @@ layout: default
     {{ content }}
   </div>
   
-  <div class="meta">
+  <div class="links">
     {% if page.links  %}
     <h4>Links used in this article</h4>
     <ol>      
       {% for link in page.links %}
-        <li>{{ link.title }} # <a href="{{ link.url }}" title="{{ link.title }}">{{ link.url }}</a></li>
+        <li>{{ link.title }} <a href="{{ link.url }}" title="{{ link.title }}">{{ link.url }}</a></li>
       {% endfor %}
     </ol>
     {% endif %}
@@ -46,7 +46,7 @@ layout: default
     <h4>People mentioned in this article</h4>
     <ol>      
       {% for person in page.people %}
-        <li>{{ person.name }} # <a href="{{ person.url }}" title="{{ person.name }}">{{ person.url }}</a></li>
+        <li>{{ person.name }} <a href="{{ person.url }}" title="{{ person.name }}">{{ person.url }}</a></li>
       {% endfor %}
     </ol>
     {% endif %}
