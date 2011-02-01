@@ -109,6 +109,12 @@ a:visited {
   color: #6b6bf0;
 }
 
+.summary {
+  margin: 2.5em 0;
+  padding: 1.25em;
+  background: #e0e0e0;
+}
+
 
 
 /* Header 
