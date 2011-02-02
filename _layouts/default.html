@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" /> 
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" /> 
   <link href="/css/mobile.css" charset="utf-8" media="screen and (max-width: 600px)" rel="stylesheet" type="text/css" />  
+  
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 </head>
 
 <body>
@@ -28,6 +30,91 @@
   <div id="content" class="block">
     <div class="container">
       {{ content }}
+    </div>
+  </div>
+  
+  <div id="import" class="block">
+    <div class="container">
+      <div id="rss" class="block">        
+        {% assign feed_url = "http://www.shopledge.com/feed/" %}
+        {% assign feed_limit = 5 %}
+        
+        <script type="text/javascript">            
+          var api = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?&q={{ feed_url }}&num={{ feed_limit }}";
+          jQuery.getJSON(api, function(data){				
+			      // Check for error
+			      if (data.responseStatus == 200) {	
+				      // Process the feeds
+				      var feed = data.responseData.feed;
+				      var msg = '<h1> News from our mother, ' + feed.title + '</h1>';
+				      
+				      msg += '<ul>';		
+	            for (var i=0; i<feed.entries.length; i++) {			
+		            var entry = feed.entries[i];			
+		            var entryDate = new Date(entry.publishedDate);
+		            var pubDate = entryDate.toLocaleDateString();
+		
+		            msg += '<li><a href="'+ entry.link +'" title="View this feed at '+ feed.title +'">';				              
+			          msg += entry.title + '<span class="date"> # ' + pubDate + '</span></a>';
+			          //msg += '<div class="summary">'+ entry.content + '</div></li>';
+		          }			
+		          msg += '</ul>';
+		          
+			      } else {
+				      // Handle error if required
+				      if (options.showerror)
+					      if (options.errormsg != '') {
+						      var msg = options.errormsg;
+					      } else {
+						      var msg = data.responseDetails;
+					      };						      
+			      };
+			      jQuery("#feed").replaceWith(msg);
+		      });            
+        </script>
+        <div id="feed">
+          <img src="{{ 'loading.gif' | asset_url }}" alt="Loading feed ..." />
+          Loading feed ...
+        </div>         
+      </div>
+      
+      <div id="twitter" class="block">
+        <h1> ... and from Twitter</h1>
+        <div id="items">
+          {% assign twitter_id = "shopledge" %}
+          {% assign twitter_limit = 5 %}
+        
+          <script type="text/javascript">
+            var counter = 0;
+            var BreakException= {};
+            
+            try {
+              jQuery.getJSON('http://twitter.com/statuses/user_timeline.json?screen_name={{ twitter_id }}&callback=?',function(data){    
+              if (data) {                
+                data.forEach(function(datum) {  
+                  var str = '<div id="item" class="block"><div class="image">';
+                  str += '<a href="http://twitter.com/' + datum.user.screen_name + '" title="' + datum.user.screen_name + '">';
+                  str += '<img class="avatar" src="' + datum.user.profile_image_url + '" alt="' + datum.user.screen_name + '" /></a>';
+                  str += '</div><div class="text">';
+                  
+                  var entryDate = new Date(datum.created_at);
+			            var pubDate = entryDate.toLocaleDateString();
+                  str += datum.text + '<span class="date">' + pubDate + '</span>';
+                  
+                  str += '</div></div>';
+                  jQuery('#twitter #items').append(str);
+                  
+                  counter++;
+                  if(counter === {{ twitter_limit }}) throw BreakException;               
+                });
+              } 
+              });​
+            } catch(e) {
+                if (e!==BreakException) throw e;
+            }           
+          </script>          
+        </div>
+      </div>
     </div>
   </div>
   

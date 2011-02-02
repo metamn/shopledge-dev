@@ -50,7 +50,7 @@ p {
   - brown: 936A58
 - link: #00e;
   - visited: #1010A1
-  - lighter: 6b6bf0
+  - lighter: #6b6bf0
   
 */
 
@@ -160,6 +160,34 @@ a:visited {
 }
 #item .excerpt, #item .image {
   margin: 1.25em .62em .62em 10%;
+}
+
+
+#import .date {
+  font-size: smaller;
+}
+
+#twitter #item {
+  padding: 0;
+}
+#twitter #item .image {
+  width: 48px;
+  margin: 0 1.25em 0 0;
+  float: left;
+}
+#twitter img {
+  border: 1px solid #e8e8e8;
+}
+#twitter #item .text {
+  float: left;
+  width: 30em;
+}
+#twitter #item .date {
+  margin-left: .62em;
+  color: #7a7a7a;
+}
+#rss  a .date {
+  color: #6b6bf0;
 }
 
 
