@@ -1,0 +1,123 @@
+---
+id: 20110208
+layout: post
+title: A Mashup For Inspiration
+date: 08 February 2011
+tags:
+  - mashup
+  - ruby
+  - delicious
+  - amazon aws s3
+  - python
+  - webdesign
+excerpt: Creating a webdesign inspiration page, portfolio like, using Delicious bookmarks.
+links:
+  # 0
+  - title: Veerle Piters' Inspiration Portfolio
+    url: http://veerle.duoh.com/inspiration 
+  # 1
+  - title: Delicious Bookmarks
+    url: http://delicious.com   
+  # 2
+  - title: Shopledge's Inspiration Portfolio
+    url: http://www.shopledge.com/portfolio/inspiration/     
+  # 3
+  - title: The Source Code of this Mashup
+    url: https://github.com/rubycs/inspiration  
+people:
+  # 0
+  - name: Veerle Pieters
+    url: http://veerle.duoh.com/
+images:
+  # 0
+  - title: Veerle Pieters' Inspiration Inspiring Us
+    url: veerle-inspiration.png 
+  # 1
+  - title: Veerle Pieters' Inspiration Inspiring Us
+    url: veerle-inspiration-large.png 
+---
+
+<h2>The Need and the Envy</h2>
+
+<p>
+Many times we are looking after some spicey web design, brave idea, tricky people or nifty technique &mdash; to relax and enjoy.
+</p>
+
+<p>
+If something found it goes directly to Delicious bookmarks tagged properly, containing for sure teh tag <em>inspiration</em>.
+</p>
+
+<p>
+Browsing bookmarks &mdash; and getting back that feeling when we've bookmarked them &mdash; however is not so pleasant.
+</p>
+
+<p>
+Recently Delicious introduced a visual tool for showing the webpages under a bookmark but &mdash; we did not get the feeling again.
+</p>
+
+<p>
+Until 
+<a href="{{ page.people[0].url }}" title="{{ page.people[0].name }}">{{ page.people[0].name }}</a>
+showed us her 
+<a href="{{ page.links[0].url }}" title="{{ page.links[0].title }}">inspirational portfolio</a> yesterday.
+</p>
+
+<p>
+  <img src="/images/{{ page.images[1].url }}" alt="{{ page.images[1].title }}" />
+</p>
+
+<h6>Stunning, isn't?</h6>
+
+
+<h2>Hack'a'day</h2>
+
+<p>It took a couple of hours to research what's new on the bookmarking scene.</p>
+
+<p>
+  We knew Yahoo will abandon 
+<a href="{{ page.links[1].url }}" title="{{ page.links[1].title }}">{{ page.links[1].title }}</a>
+soon &mdash; as dipshit companies usually do <em>blindly</em> with their <em>values</em>.
+</p>
+
+<p>
+  Unfortunately for them, lucky for us, the couple of Delicious replacements we've found were not delivering our expectations,
+  except Pinboard.in which is not free. (Which is ok and respectable, probably after shutting down Delicious we will move to Pinboard)
+</p>
+
+<p>
+  And a new hack'a'day started &mdash writing the core code took less time than looking for alternatives.
+</p>
+
+<p>
+  The <a href="{{ page.links[3].url }}" title="{{ page.links[3].title }}">source code</a> 
+  with guidelines is up on Github, grab it, use it and fork it.
+</p>
+
+<p>
+  The <a href="{{ page.links[2].url }}" title="{{ page.links[2].title }}">result</a> 
+  is on our mother's page &mdash; not so shiny like Veerle's &mdash; but works for now.
+</p>
+
+
+<h2>Mashing Up The Flow</h2>
+
+<p>
+  It seems the <a href="http://dev.shopledge.com/2011/01/12/the-easiest-way-to-blog.html">Jekyll conspiration</a>
+  had success on us.
+</p>
+
+<p>
+  Leaving servers alone and processing locally information, then uploading the barebones result, then serving it fast,
+  then ..., 
+</p>
+
+<p>
+And meantime having fun, learning, hacking, giving back to community &mdash; it's more than the future of software development.
+</p>
+
+<h6 class="summary">
+  Mashing up makes you a better man.
+</h6>  
+
+
+

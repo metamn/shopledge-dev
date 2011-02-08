@@ -1,0 +1,17 @@
+---
+layout: default
+title: "tagged: ruby"
+syntax-highlighting: yes
+---
+  <div id="archive">
+    <h1 class="title">Archive for <span class="archive-title">ruby</span></h1>
+    <div id="items">
+      {% for post in site.posts %}
+		    {% for tag in post.tags %}
+			    {%if tag == "ruby" %}
+				    {%include post.html%}
+			    {%endif%}
+		    {%endfor%}
+      {% endfor %}
+    </div>
+  </div>
