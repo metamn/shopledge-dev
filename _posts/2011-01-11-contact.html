@@ -137,10 +137,10 @@ excerpt: dev [at] shopledge.com or @shopledge on Twitter
   Also check out the <a href="#links">links</a> we like and <a href="#people">people</a> we learn from.
 </p>
 
-<div id="smooth-links">
+<div id="smooth-links" class="accordion">
 
   <h3 id="date">Articles by date</h3>
-  <ol class="date">
+  <ol class="date pane">
   {% for post in site.posts %}
     <li>
       <span class="date">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
@@ -149,12 +149,14 @@ excerpt: dev [at] shopledge.com or @shopledge on Twitter
   </ol>
 
   <h3 id="tag">Tag archives</h3>
-  {% for tag in site.tags %}
-    <a href="/tags/{{ tag[0] }}/">{{ tag[0] }}</a>,
-  {% endfor %}
+  <div class="pane">
+    {% for tag in site.tags %}
+      <a href="/tags/{{ tag[0] }}/">{{ tag[0] }}</a>,
+    {% endfor %}
+  </div>
 
   <h3 id="links">Links</h3>
-  <ul class="links">     
+  <ul class="links pane">     
     {% for post in site.posts %}
       {% for link in post.links %}
         <li>{{ link.title }} # <a href="{{ link.url }}" title="{{ link.title }}">{{ link.url }}</a></li>
@@ -163,7 +165,7 @@ excerpt: dev [at] shopledge.com or @shopledge on Twitter
   </ul>
 
   <h3 id="people">People</h3>
-  <ul class="links">     
+  <ul class="links pane">     
     {% for post in site.posts %}
       {% for person in post.people %}
         <li>{{ person.name }} # <a href="{{ person.url }}" title="{{ person.name }}">{{ person.url }}</a></li>
@@ -172,7 +174,7 @@ excerpt: dev [at] shopledge.com or @shopledge on Twitter
   </ul>      
 
   <h3 id="images">Images</h3>
-  <div id="image-archive">     
+  <div id="image-archive" class="pane">     
     {% for post in site.posts %}
       {% for image in post.images %}
         <div id="item" class="left {% cycle 'even', 'odd' %}">

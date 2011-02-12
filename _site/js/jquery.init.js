@@ -2,8 +2,8 @@
 
 jQuery(document).ready(function(){
   
-  jQuery("#accordion h3").next(".pane").hide();
-  jQuery("#accordion h3").toggle(
+  jQuery("#accordion h3, .accordion h3").next(".pane").hide();
+  jQuery("#accordion h3, .accordion h3").toggle(
     function () {
       jQuery(this).addClass("current");
       jQuery(this).next(".pane").show();

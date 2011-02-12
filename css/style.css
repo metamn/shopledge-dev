@@ -66,12 +66,12 @@ a h1 {
   background: #f1f1f1; 
   padding: 1.25em; 
 }
-#accordion h3 {
+#accordion h3, .accordion h3 {
   padding-bottom: .31em;
   border-bottom: 1px solid #f9f9f9;
   cursor: pointer;
 }
-#accordion .pane {
+#accordion .pane, .accordion .pane {
   padding: 1.25em 0;
 }
 #item.odd {
