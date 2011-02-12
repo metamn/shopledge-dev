@@ -62,9 +62,17 @@ a h1 {
   color: #2d2d2d;
   text-decoration: none;
 }
-#article, #related, #comments, #share {
+#article, #accordion {
   background: #f1f1f1; 
   padding: 1.25em; 
+}
+#accordion h3 {
+  padding-bottom: .31em;
+  border-bottom: 1px solid #f9f9f9;
+  cursor: pointer;
+}
+#accordion .pane {
+  padding: 1.25em 0;
 }
 #item.odd {
   background: #f1f1f1;
