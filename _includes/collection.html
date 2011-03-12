@@ -9,12 +9,14 @@
           {{ post.excerpt }}
         </div>
       {% endif %}
-      {% if post.images %}
-      <div class="image">
-        <a href="{{ post.url }}" title="{{ post.title }}">
-          <img src="../images/{{ post.images[0].url }}" alt="{{ post.title }}"/></a>
-      </div>
-      {% endif %}
+      {% unless post.no-images-on-frontpage %}
+        {% if post.images %}
+        <div class="image">
+          <a href="{{ post.url }}" title="{{ post.title }}">
+            <img src="../images/{{ post.images[0].url }}" alt="{{ post.title }}"/></a>
+        </div>
+        {% endif %}
+      {% endunless %}
     </div>
   {% endfor %}  
 </div>

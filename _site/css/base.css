@@ -132,28 +132,6 @@ BDO[DIR="rtl"]  { direction: rtl; unicode-bidi: bidi-override }
   ul, ol, dl    { page-break-before: avoid }
 }
 
-
-
-
-/* Forms
-*/
-table {
-  width: 100%;
-}
-input, textarea, select {
-  width: 95%;
-  font-size: 100%; 
-}
-input.button {
-  width: auto;
-}
-input[type="radio"], input[type="checkbox"], input[type="file"] {
-  width: auto;
-}
-
-
-
-
 /* Hacks
 */
 
@@ -173,6 +151,81 @@ p {
   white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
   word-wrap: break-word; /* IE */
   -moz-binding: url('xbl.xml#wordwrap'); /* Firefox (using XBL) */
+}
+
+
+
+
+/* Common 
+*/
+
+table {
+  width: 100%;
+  margin-bottom: 5%;
+}
+td, th, tr {
+  vertical-align: top;
+  text-align: left;
+}
+td, th {
+  padding: 2%;
+}
+tr {
+  border-bottom: 1px solid;
+}
+
+input, textarea, select {
+  width: 95%;
+  font-size: 100%; 
+}
+input.button {
+  width: auto;
+}
+input[type="radio"], input[type="checkbox"], input[type="file"] {
+  width: auto;
+}
+
+
+.link {
+  cursor: pointer;
+}
+.clear {
+  clear: both;
+}
+.block {
+  width: 100%;
+  float: left;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.hidden {
+  display: none;
+}
+.alignright {
+  text-align: right;
+}
+.alignleft {
+  text-align: left;
+}
+.aligncenter {
+  text-align: center;
+}
+ul {
+  list-style-type: disc;
+}
+ul.inline-list {
+  display: block;
+  margin: 0;
+}
+ul.inline-list li {
+  display: inline;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowarp;  
 }
 
 

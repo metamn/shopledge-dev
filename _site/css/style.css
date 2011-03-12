@@ -188,7 +188,7 @@ a:visited {
 }
 #twitter #item .text {
   float: left;
-  width: 30em;
+  width: 24em;
 }
 #twitter #item .date {
   margin-left: .62em;
@@ -264,45 +264,12 @@ li {
   margin-bottom: 2.5%;
 }
 
-.link {
-  cursor: pointer;
+tr {
+  border-color: #ddd;
 }
-.clear {
-  clear: both;
+
+.gist {
+  margin-bottom: 5%;
 }
-.block {
-  width: 100%;
-  float: left;
-}
-.left {
-  float: left;
-}
-.right {
-  float: right;
-}
-.hidden {
-  display: none;
-}
-.alignright {
-  text-align: right;
-}
-.alignleft {
-  text-align: left;
-}
-.aligncenter {
-  text-align: center;
-}
-ul {
-  list-style-type: disc;
-}
-ul.inline-list {
-  display: block;
-  margin: 0;
-}
-ul.inline-list li {
-  display: inline;
-  list-style-type: none;
-  margin-left: 0;
-  white-space: nowarp;  
-}
+
 

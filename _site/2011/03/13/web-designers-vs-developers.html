@@ -6,7 +6,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Responsive Web Design</title>
+  <title>Web Designers vs. Developers</title>
 
   <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" /> 
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" /> 
@@ -31,145 +31,224 @@
   <div id="content" class="block">
     <div class="container">
       <div id="article">
-  <a href="/2011/01/13/responsive-web-design.html" title="Permalink to Responsive Web Design"><h1>Responsive Web Design</h1></a>
+  <a href="/2011/03/13/web-designers-vs-developers.html" title="Permalink to Web Designers vs. Developers"><h1>Web Designers vs. Developers</h1></a>
   
     
   <div class="meta">
     <ul class="inline-list">
-      <li class="date"> Posted 13 Jan 2011 </li>
+      <li class="date"> Posted 13 Mar 2011 </li>
       <li class="tags"> in 
         
-          <a href="/tags/trends/">trends</a>
-          
-          ,
-           
-        
-          <a href="/tags/mobile/">mobile</a>
-          
-          ,
-           
-        
-          <a href="/tags/responsive web design/">responsive web design</a>
-          
-          ,
-           
-        
-          <a href="/tags/css media query/">css media query</a>
-          
-          ,
-           
-        
-          <a href="/tags/flexible grid/">flexible grid</a>
-          
-          ,
-           
-        
           <a href="/tags/design/">design</a>
+          
+          ,
+           
+        
+          <a href="/tags/development/">development</a>
+          
+          ,
+           
+        
+          <a href="/tags/frameworks/">frameworks</a>
+          
+          ,
+           
+        
+          <a href="/tags/best practices/">best practices</a>
+          
+          ,
+           
+        
+          <a href="/tags/ecosystems/">ecosystems</a>
+          
+          ,
+           
+        
+          <a href="/tags/principles/">principles</a>
+          
+          ,
+           
+        
+          <a href="/tags/tools/">tools</a>
+          
+          ,
+           
+        
+          <a href="/tags/hero/">hero</a>
           
           #
            
         
       </li>
-      <li><a href="http://dev.shopledge.com/2011/01/13/responsive-web-design.html#disqus_thread">comments</a></li>
+      <li><a href="http://dev.shopledge.com/2011/03/13/web-designers-vs-developers.html#disqus_thread">comments</a></li>
     </ul>
   </div>  
   
   
   <div class="excerpt">
-    2011 is about websites becoming responsive for the different devices people use to access them.
+    Writing and maintaing code in HTML/CSS is painful. Designers should learn from peers like Ruby developers who enjoy every part of it.
   </div>
     
   <div class="body">
-    <h2>The Short History of Responsive Web Design</h2>
+    <h2>Design Is Way Harder Than Development</h2>
 <p>
-  <a href="http://ethanmarcotte.com/" title="Ethan Marcotte">Ethan Marcotte</a> in 
-  <a href="http://alistapart.com" title="A List Apart">A List Apart</a> article, back in May 2010 opened my eyes about
-  a new, and in the same time old technology capable to produce web sites compatible with various displays like 
-  desktop monitors, tablets, smartphones and smaller mobile devices.   
+  Writing programs &mdash; in Ruby, PHP, Javascript, etc. &mdash; and designing web sites with
+  HTML, CSS and templating languages like Liquid is not the same thing, at all.
+</p>
+
+<p>
+  Programming languages are older and more advanced than markup and styling languages. They focus on data,
+  not humans as in case of web design.
+</p>
+<p>
+  Manipulating code bits living in an abstract but uniform environment &mdash; like the computer &mdash; is easier than 
+  manipulating pixels living in the perception of humans, millions of them and all different.
+</p>
+
+<p>
+  Code and data runs in virtual machines, standard environments when displays vary from mobile handsets to large 
+  projector screens, and, web sites are rendered by many different browsers.
+</p>
+
+<p>
+  Web design is like shooting on moving target; programming, well, is stable, testable, more straightforward.
+</p>
+  
+
+<h2>Tools And Best Practices From Programmers To Web Designers</h2>
+<p>
+  Yes, you can do it.
+</p>  
+
+<p>
+  You'll never have that advanced ecosystem a programming language is equipped with: automated tests,
+  intelligent debugger & performance analyser, code coverage tool, documentation generator, frameworks built
+  on frameworks, and all.
+</p>
+
+<p>
+  But you can re-use the <em>principles</em> of creating good code in web design, and, you can adapt some of the 
+  <em>tools</em> programmers use. 
+</p>
+<p>
+  A good starting point for analysis could be the 
+  <a href="http://www.ruby-lang.org/" title="The Ruby Programming Language">Ruby programming language</a> and the 
+  <a href="http://rubyonrails.org/" title="The Ruby on Rails Web Development Ecosystem">Ruby on Rails web development platform</a>, 
+  probably the best tools of the moment for creating web applications:
+</p>
+  
+<h3>1. Human Friendly Code</h3>
+<p>
+  Ruby was created / optimised for developers, not the machine.
+</p>  
+<p>
+  Programming with Ruby is very straightforward today, the language constructs are so close
+  to plain English even a child can understood and use them. 
+</p>
+<p>
+  Ruby code needs no documentation &mdash; it is so elegant it documents itself.
+</p>
+
+<p>
+&mdash;
+</p>
+
+<p>
+  As a first lesson try to create human friendly, readable, understandable design code which documents itself. 
+</p>
+<p>
+  Make your design your friend. Changing, editing, reviewing, enhancing, extending a Ruby code is always a joy.
+  In contrast, your HTML or CSS code will suck after a while even for you, the creator.
+</p>
+<p class="summary">
+  The biggest challenge in web design is to integrate, by innovative and meticulous naming technique the HTML, CSS and Javascript 
+  elements into a seamlessly co-working entity. 
+</p>
+<p>
+  Mark your code in a straightforward, easily rememberable way which works in any context assuring the <em>flow</em>. 
+  So you don't have to look up different source files to find out how to style, or add interaction to an element.  
+</p>
+
+  
+<h3>2. Don't Repeat Yourself</h3>
+<p>
+  Scalability is everything, you know.
+</p>
+<p>
+  This principle turned out to be very strong building the success of the Rails framework.
+</p>
+<p>
+  Rails was created by substracting the essence from a well known, top notch web application (Basecamp) created with Ruby. 
+  All best practices were turned into reusable modules forming the framework itself.
+</p>
+<p>
+  Basecamp, thus Rails was continuously refactored and optimised until all fat was trimmed.
+  The outcome was the simplest and most robust tool which can be reused, again, to create same successful applications
+  in a faster and easier way.
+</p>
+<p>
+  Smart people are maximising the outcome of every work they done. Beside the final product there is always something more
+  &mdash; an enhanced tool- and mindset moving them forward to repeat the same / similar task faster and easier.
 </p> 
-
 <p>
-  After reading <a href="http://www.alistapart.com/articles/responsive-web-design" title="Responsive Web Design">the article</a> I was surprised how
-  straightforward and <em>easy</em> is to create responsive web sites.
+  They don't repeat themselves. Instead the tool, the framework, the ecosystem they have <em>extracted</em> repeats and embeds 
+  automagicaly in every following project all the lessons they've previously learned.
+</p>
+<p class="summary">
+  Web design is lacking similar tools and frameworks. Industry best practices are not extracted into a common 
+  knowledge base and then enhanced by a community. Designing for web is not scalable.
 </p>
 
+
+
+<h3>3. Test Driven Design</h3>
 <p>
-  You just have to use elastic measures (<b>em, %</b>) in your CSS and add two lines of code in your HTML.
-  There is a simple magic formula how to size design elements relatively to the current display resolution and that's all,
-  the rest is done by the modern browser.
+  I know it sounds impossible. No test tool can <em>see</em> as human eyes do.
+</p>
+<p>
+  But if developers can do it maybe the designers will be able too.
+</p>
+<p>
+  In an ideal scenario &mdash; you have human friendly design code and a powerful design framework built on your best
+  knowledge &mdash; you have a strong HTML/CSS/Javascript base at disposal whenever you start a new project.
+</p>
+<p>
+  This framework in order to be perfect must be tested on various browsers, operating systems, display sizes, color depths 
+  and so on.
+  No testing tool will warn you on bugs like in Webkit if you add newline in your source code for a link the design will broke.
+
+  <script src="https://gist.github.com/867212.js?file=button-webkit.html"></script>
+  
+  This will cause the following broken button on Webkit browsers (on Firefox all is fine):
+  <br/><br/>
+  <img src="/images/webkit-bug.png" alt="A Bug In Webkit Browsers" />
 </p>
 
-<p>
-  A few months later 
-  <a href="http://zeldman.com" title="Jeffrey Zeldman">Jeffrey Zeldman</a>
-  the grandpa of all web designers stated 
-  <a href="http://www.zeldman.com/2010/06/23/responsive-design-is-the-new-black/" title="Responsive design is the new black">Responsive design is the new black</a>
-  so I was sure I'm on the right track.
+<p class="summary">
+  Enter <a href="https://www.mturk.com/mturk/welcome" title="Amazon Mechanical Turk">Amazon's Mechanical Turk</a>. If web designers would unite into a community distilling the best practices into a framework
+  using human test power all elements of that framework would be tested, bullet proof, for all browsers and operating systems 
+  for nothing.
 </p>
 
+
+
+<h2>And the tl;dr</h2>
 <p>
-  With the <a href="http://www.webdesignerdepot.com/2011/01/web-design-predictions-for-2011/" title="Web Design Predictions for 2011">Web Design Predictions for 2011</a>
-  Responsive Web Design got full respect and support from the designer elite.
+  Web designers (HTML/CSS programmers) should learn from their developer brothers (coding in Ruby, Python etc.) to make
+  designing more enjoyable, more bullet-proof and widely sustained.  
+</p>
+<p>
+  The current web designer elite shares some thoughts on best practices, a few boilerplate code but there are no frameworks
+  and ecosystems like in development which creates power both for its creators and users.
+</p>
+<p class='summary'>
+  Both principles and tools can be borrowed / adapted from developers &mdash; what we only need is a charismatic leader
+  to become a hero.
 </p>
 
-<p>
-  So please forget responsiveness is not the <em>silver bullet</em> &mdash; just flow with the opinion leaders. 
-</p>
 
-<p>
-  And do not trust ideas like <em>"Mobile Web Design in the Rails Way"</em> &mdash web development frameworks are
-  opinionated about development not about design.
-</p>
-
-<h2>Yes, The Images</h2>
-
-<p>
-  CSS media queries and the flexible grid &mdash the foundation for responsiveness &mdash are dealing with the 
-  <em>display size</em> of the HTML elements in a webpage and <em>not</em> with the size of images in kilobytes 
-  to be downloaded.
-</p>
-
-<p>
-  It sounds good to use differently sized (in KB) images for desktop and mobile. You save bandwith and download time.
-</p>
-
-<p>
-  Probably everybody is already uploading different sizes for images &mdash thumbnail, medium, large &mdash by default. 
-  <br/>
-  <br/>
-  So it remains to detect run-time &mdash with Javascript and cookies &mdash which image size to use for different displays.
-</p>
-
-<script src="https://gist.github.com/803966.js?file=responsive.js"></script>
-
-
-<h3>An example</h3>
-<p>
-  This very blog uses the responsive technique to stay mobile.
-  </br>
-  There are three steps to follow:
-  <ol>
-    <li>
-      Tell the browser to reset the viewport.
-      <br/>
-      <script src="https://gist.github.com/803971.js?file=responsive.html"></script>
-    </li>
-    <li>
-      Load the mobile.css when necessary
-      <br/>
-      <script src="https://gist.github.com/804170.js?file=mobile.html"></script>
-    </li>  
-    <li>
-      Create the mobile.css.
-    </li>
-  </ol>
-  You can check the source code at <a href="https://github.com/rubycs/shopledge-dev" title="The Source Code of this Blog">GitHub</a>.
-</p>
-
-<h6 class="summary">
-  To see responsive web design in full action please visit <a href="http://shopledge.com" title="shopledge.com">our parent site</a> and try to
-  resize your browser.
-</h6>
+  
+  
 
   </div>  
 </div>
@@ -182,35 +261,22 @@
       <h3>Links used in this article</h3>
       <ol class="pane">      
         
-          <li>Web Design Predictions for 2011 <a href="http://www.webdesignerdepot.com/2011/01/web-design-predictions-for-2011/" title="Web Design Predictions for 2011">http://www.webdesignerdepot.com/2011/01/web-design-predictions-for-2011/</a></li>
+          <li>Amazon Mechanical Turk <a href="https://www.mturk.com/mturk/welcome" title="Amazon Mechanical Turk">https://www.mturk.com/mturk/welcome</a></li>
         
-          <li>Responsive design is the new black <a href="http://www.zeldman.com/2010/06/23/responsive-design-is-the-new-black/" title="Responsive design is the new black">http://www.zeldman.com/2010/06/23/responsive-design-is-the-new-black/</a></li>
+          <li>The Ruby Programming Language <a href="http://www.ruby-lang.org/" title="The Ruby Programming Language">http://www.ruby-lang.org/</a></li>
         
-          <li>A List Apart <a href="http://alistapart.com" title="A List Apart">http://alistapart.com</a></li>
-        
-          <li>Responsive Web Design <a href="http://www.alistapart.com/articles/responsive-web-design" title="Responsive Web Design">http://www.alistapart.com/articles/responsive-web-design</a></li>
-        
-          <li>The Source Code of this Blog <a href="https://github.com/rubycs/shopledge-dev" title="The Source Code of this Blog">https://github.com/rubycs/shopledge-dev</a></li>
+          <li>The Ruby on Rails Web Development Ecosystem <a href="http://rubyonrails.org/" title="The Ruby on Rails Web Development Ecosystem">http://rubyonrails.org/</a></li>
         
       </ol>
     
     
-    
-      <h3>People mentioned in this article</h3>
-      <ol class="pane">      
-        
-          <li>Ethan Marcotte <a href="http://ethanmarcotte.com/" title="Ethan Marcotte">http://ethanmarcotte.com/</a></li>
-        
-          <li>Jeffrey Zeldman <a href="http://zeldman.com" title="Jeffrey Zeldman">http://zeldman.com</a></li>
-        
-      </ol>
     
   </div>
 
   <div id="share">
     <h3>Share this post</h3>
     <div class="pane">
-      <a href="http://twitter.com/share?url=http://dev.shopledge.com/2011/01/13/responsive-web-design.html" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+      <a href="http://twitter.com/share?url=http://dev.shopledge.com/2011/03/13/web-designers-vs-developers.html" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
       <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like layout="button_count" show_faces="false" width="450"></fb:like>
     </div>  
   </div>
@@ -222,9 +288,9 @@
       
         <li><span>01 Apr 2011</span> &raquo; <a href="/2011/04/01/a-modern-css-html-style-guide.html">A Modern CSS/HTML Style Guide</a></li>
       
-        <li><span>13 Mar 2011</span> &raquo; <a href="/2011/03/13/web-designers-vs-developers.html">Web Designers vs. Developers</a></li>
-      
         <li><span>08 Feb 2011</span> &raquo; <a href="/2011/02/08/a-mashup-for-inspiration.html">A Mashup For Inspiration</a></li>
+      
+        <li><span>13 Jan 2011</span> &raquo; <a href="/2011/01/13/responsive-web-design.html">Responsive Web Design</a></li>
       
     </ul>
   </div>
@@ -237,8 +303,8 @@
           var disqus_shortname = 'shopledgedev'; // required: replace example with your forum shortname
 
           // The following are highly recommended additional parameters. Remove the slashes in front to use.
-          var disqus_identifier = '/2011/01/13/responsive-web-design';
-          var disqus_url = 'http://dev.shopledge.com' + '/2011/01/13/responsive-web-design.html';
+          var disqus_identifier = '/2011/03/13/web-designers-vs-developers';
+          var disqus_url = 'http://dev.shopledge.com' + '/2011/03/13/web-designers-vs-developers.html';
 
           /* * * DON'T EDIT BELOW THIS LINE * * */
           (function() {

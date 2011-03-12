@@ -6,7 +6,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>A Mashup For Inspiration</title>
+  <title>A Modern CSS/HTML Style Guide</title>
 
   <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" /> 
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" /> 
@@ -31,143 +31,222 @@
   <div id="content" class="block">
     <div class="container">
       <div id="article">
-  <a href="/2011/02/08/a-mashup-for-inspiration.html" title="Permalink to A Mashup For Inspiration"><h1>A Mashup For Inspiration</h1></a>
+  <a href="/2011/04/01/a-modern-css-html-style-guide.html" title="Permalink to A Modern CSS/HTML Style Guide"><h1>A Modern CSS/HTML Style Guide</h1></a>
   
     
   <div class="meta">
     <ul class="inline-list">
-      <li class="date"> Posted 08 Feb 2011 </li>
+      <li class="date"> Posted 01 Apr 2011 </li>
       <li class="tags"> in 
         
-          <a href="/tags/mashup/">mashup</a>
-          
-          ,
-           
-        
-          <a href="/tags/ruby/">ruby</a>
-          
-          ,
-           
-        
-          <a href="/tags/delicious/">delicious</a>
-          
-          ,
-           
-        
-          <a href="/tags/amazon aws s3/">amazon aws s3</a>
-          
-          ,
-           
-        
-          <a href="/tags/python/">python</a>
-          
-          ,
-           
-        
-          <a href="/tags/webdesign/">webdesign</a>
+          <a href="/tags/design/">design</a>
           
           #
            
         
       </li>
-      <li><a href="http://dev.shopledge.com/2011/02/08/a-mashup-for-inspiration.html#disqus_thread">comments</a></li>
+      <li><a href="http://dev.shopledge.com/2011/04/01/a-modern-css-html-style-guide.html#disqus_thread">comments</a></li>
     </ul>
   </div>  
   
   
   <div class="excerpt">
-    Creating a webdesign inspiration page, portfolio like, using Delicious bookmarks.
+    A small framework to enjoy creating and maintaining HTML/CSS websites.
   </div>
     
   <div class="body">
-    <h2>The Need and the Envy</h2>
-
+    <h2>The Pain</h2>
 <p>
-Many times we are looking after some spicey web design, brave idea, tricky people or nifty technique &mdash; to relax and enjoy.
+  As we've seen in a <a href="http://dev.shopledge.com/2011/03/13/web-designers-vs-developers.html">previous post</a> 
+  there is no <em>flow</em> for web designers in comparision to their developer peers.
+</p>
+<p>
+  Web designers &mdash; people coding in HTML and CSS &mdash; versus developers &mdash; coding in Ruby, Python etc. &mdash;
+  lack, amongst others but more importantly: 
+  <ol>
+    <li>Human friendly source code.</li>
+    <li>Frameworks which distill industry best practices and speed up the creation of new projects.</li>
+    <li>A bullet-proof and cheap testing mechanism on all browsers and platforms.</li>  
+  </ol>
+</p>
+
+<h2>The Solution</h2>
+<p>
+  Learning from others, especially from  
+  <a href="http://www.ruby-lang.org/" title="The Ruby Programming Language">Ruby</a> and the 
+  <a href="http://rubyonrails.org/" title="The Ruby on Rails Web Development Ecosystem">Ruby on Rails</a> community, 
+  there is a chance to solve all above problems.
 </p>
 
 <p>
-If something found it goes directly to Delicious bookmarks tagged properly, containing for sure teh tag <em>inspiration</em>.
+  Our intent is to create a set of CSS/HTML and Javascript files embedding current best practices and tools,
+  present their features in this article, and share on Github for reuse and community building.
 </p>
 
 <p>
-Browsing bookmarks &mdash; and getting back that feeling we've got when bookmarked them &mdash; however is not so awesome.
+  We are covering all major aspects of web design:
+  <ul>
+    <li>Separating reusable parts into common files.</li>
+    <li>Creating a responsible grid layout.</li>
+    <li>Horizontal and vertical spacing of elements.</li>
+    <li>Semantic identification and classification of elements.</li>
+    <li>Typography.</li>
+    <li>Documentation.</li>
+    <li>Testing.</li>
+  </ul>
+</p>
+
+<h2>Separate CSS Files For A Layered And Reusable Structure</h2>
+<p>
+  One of the best practices Ruby and Rails developers learned was the mantra <em>Don't Repeat Yourself.</em>
+</p>
+<p>
+  In this spirit every bit of code of yours is unique, not repeated elsewhere. The advantage is tremenduous:
+  <ol>
+    <li>You have to change code in a single place and will have global effects.</li>
+    <li>Your code base is reduced to a minimum number of lines of code &mdash; no fat at all &mdash; for speed and easier maintenance.</li>
+    <li>Some parts of your code become reusable accross all your projects.</li>
+    <li>Your code will be built on independent, loosely coupled layers to enable fast adaptation for changes.</li>
+  </ol>
+</p>
+<p>
+  In our case this principle applies first to CSS files.
+</p>
+<p>
+  We know CSS is used for many different tasks: to reset the browser, to lay out the grid, 
+  position elements, define their spacing, add colors and typo, etc.
+</p>
+<p>
+  It would be straightforward to group these tasks into independent layers and associate a CSS file for it.
+</p>  
+<p>
+  Each CSS file would be reusable accross current and future projects, and more, each CSS file would be built upon the other.
+</p>
+<p>
+  As an example, and as a current best practice we use the following layers at Shopledge:
+  <ol>
+    <li><em><strong>base.css</strong></em>, to reset the browser and store common CSS classes like 
+      <em>.alignright</em>, <em>ul.inline-list</em> etc.</li>
+    <li><em><strong>layout.css</strong></em>, containing the grid, the typography and the spacing, formatting and 
+      positioning of all elements.</li>
+    <li><em><strong>theme.css</strong></em>, dealing exclusively with colouring spaces and elements of the design.</li>
+    <li><em><strong>mobile.css</strong></em>, <em><strong>tablet.css</strong></em>, <em><strong>large.css</strong></em> 
+    for different screen sizes.</li>
+    <li><em><strong>ie.css</strong></em>, <em><strong>ie7.css</strong></em>, to stay compatible with Internet Explorer</li>  
+  </ol>
+</p>
+<p>
+  These layers might look too few or too many but they satisfy one strong condition: each of them is independent and only
+  contains definitions meaningful for their own level.
+</p>  
+<p>
+  For example, <em>layout.css</em> might be split into <em>grid.css</em> and <em>typography.css</em> but in this case 
+  horizontal positioning of elements given by the grid would be separated from the vertical rhythm given by typography.
+</p>
+<p>
+  Details coming in the next chapters, important is to realise each level is dependent of the previous level, and this 
+  construct is highly changeable without breaking the entire context. (For example changing <em>theme.css</em> with 
+  <em>theme-massive.css</em>)
+</p>
+
+
+
+<h2>Define The Site Structure</h2>
+<p>
+  Every site has it's own nature which defines it's own structure.
 </p>
 
 <p>
-Recently Delicious introduced a visual tool for showing the website of the bookmarked URL but &mdash; we did not get the feeling again.
+  For example a blog by it's nature is meant to display an article. 
+  In plus it is equipped with a few list of articles meant to facilitate finding an article to be displayed. 
+</p> 
+
+<p>
+  An online store has exactly the same structure: displaying a product, and some list of products to aide navigation,
+  and in plus it must have a shopping cart page.
 </p>
 
 <p>
-Until 
-<a href="http://veerle.duoh.com/" title="Veerle Pieters">Veerle Pieters</a>
-showed us her 
-<a href="http://veerle.duoh.com/inspiration" title="Veerle Piters' Inspiration Portfolio">inspirational portfolio</a> yesterday.
+  It turns out many websites <em>share</em> a common, basic structure: they display information, and helps user to find information.
 </p>
 
 <p>
-  <img src="/images/veerle-inspiration-large.png" alt="Veerle Pieters' Inspiration Inspiring Us" />
-</p>
-
-<h6>Stunning, isn't?</h6>
-
-
-<h2>Hack'a'day</h2>
-
-<p>It took a couple of hours to research what's hot on the bookmarking scene.</p>
+  From the designer's point of view this means it will have to design two types of pages: 
+  one displaying information, and the other displaying some lists, collections, archives.
+</p>  
 
 <p>
-  We knew Yahoo will abandon 
-<a href="http://delicious.com" title="Delicious Bookmarks">Delicious Bookmarks</a>
-soon &mdash; as dipshit companies usually do <em>blindly</em> with their <em>values</em>.
+  Why this is so important? To determine the amount of work to be done &mdash; how many different pages must be designed &mdash;
+  and to prepare to reuse as much classes and indetifiers as possible.
 </p>
 
 <p>
-  Unfortunately for them, lucky for us, the couple of Delicious replacements we've found were not delivering the expectations,
-  except Pinboard.in which is not free. 
+  Let's compare a blog and an e-commerce site to find out the number of different page designs we'll have to create, and
+  see how easily we can reduce the markup:
+    <table>
+      <tr>
+        <th>&nbsp;</th>
+        <th>Blog</th>
+        <th>Webshop</th>
+        <th>Page type</th>
+      </tr>
+      <tr>
+        <td>Frontpage</td>
+        <td>Displays products, collections and information</td>
+        <td>Displays posts, categories and information</td>
+        <td>.frontpage</td>
+      </tr>
+      <tr>
+        <td>Product / Article Page</td>
+        <td>Displays a product and similare products</td>
+        <td>Displays an article</td>
+        <td>.page</td>
+      </tr>
+      <tr>
+        <td>Collections / Archives Page</td>
+        <td>Displays a list of products</td>
+        <td>Displays a list of posts</td>
+        <td>.collection</td>
+      </tr>
+      <tr>
+        <td>Search Page</td>
+        <td>Displays a list of products</td>
+        <td>Displays a list of posts</td>
+        <td>.collection</td>
+      </tr>
+      <tr>
+        <td>Not Found Page</td>
+        <td>Displays information</td>
+        <td>Displays information</td>
+        <td>.page</td>
+      </tr>
+      <tr>
+        <td>About us, Contact & similar pages</td>
+        <td>Displays information</td>
+        <td>Displays information</td>
+        <td>.page</td>
+      </tr>
+      <tr>
+        <td>Shopping Cart Page</td>
+        <td>Displays a list of products</td>
+        <td>n/a</td>
+        <td>.collection</td>
+      </tr>
+    </table>
 </p>
 
 <p>
-  (Which is ok and respectable, probably after shutting down Delicious we will move to Pinboard)
+  It turns out we have to deal with three different page designs identifiable by: 
+  <script src="https://gist.github.com/867309.js?file=gistfile1.txt"></script>
 </p>
 
 <p>
-  And a new hack'a'day started &mdash writing the core code took less time than looking for alternatives.
-</p>
-
-<p>
-  The <a href="https://github.com/rubycs/inspiration" title="The Source Code of this Mashup">source code</a> 
-  with guidelines is up on Github, grab it, use it and fork it.
-</p>
-
-<p>
-  The <a href="http://www.shopledge.com/portfolio/inspiration/" title="Shopledge's Inspiration Portfolio">result</a> 
-  is on our mother's page &mdash; not so shiny like Veerle's &mdash; but works for now.
+  Even more, if we later decide the <em>Not Found Page</em> must list some products or articles by switching it's class
+  to <em>.collection</em> the entire layout and page structure is immediately changed.
 </p>
 
 
-<h2>Mashing Up The Flow</h2>
-
-<p>
-  It seems the <a href="http://dev.shopledge.com/2011/01/12/the-easiest-way-to-blog.html">Jekyll conspiration</a>
-  had success on us.
-</p>
-
-<p>
-  Leaving servers alone and processing locally information, then uploading the barebones result, then serving it fast,
-  then ... 
-</p>
-
-<p>
-And meantime having fun, learning, hacking, giving back to community &mdash; it's more than the future of software development.
-</p>
-
-<h6 class="summary">
-  Mashing up makes you a better (meta)man.
-</h6>  
-
-
-
+  
 
   </div>  
 </div>
@@ -180,13 +259,11 @@ And meantime having fun, learning, hacking, giving back to community &mdash; it'
       <h3>Links used in this article</h3>
       <ol class="pane">      
         
-          <li>Veerle Piters' Inspiration Portfolio <a href="http://veerle.duoh.com/inspiration" title="Veerle Piters' Inspiration Portfolio">http://veerle.duoh.com/inspiration</a></li>
+          <li>Amazon Mechanical Turk <a href="https://www.mturk.com/mturk/welcome" title="Amazon Mechanical Turk">https://www.mturk.com/mturk/welcome</a></li>
         
-          <li>Delicious Bookmarks <a href="http://delicious.com" title="Delicious Bookmarks">http://delicious.com</a></li>
+          <li>The Ruby Programming Language <a href="http://www.ruby-lang.org/" title="The Ruby Programming Language">http://www.ruby-lang.org/</a></li>
         
-          <li>Shopledge's Inspiration Portfolio <a href="http://www.shopledge.com/portfolio/inspiration/" title="Shopledge's Inspiration Portfolio">http://www.shopledge.com/portfolio/inspiration/</a></li>
-        
-          <li>The Source Code of this Mashup <a href="https://github.com/rubycs/inspiration" title="The Source Code of this Mashup">https://github.com/rubycs/inspiration</a></li>
+          <li>The Ruby on Rails Web Development Ecosystem <a href="http://rubyonrails.org/" title="The Ruby on Rails Web Development Ecosystem">http://rubyonrails.org/</a></li>
         
       </ol>
     
@@ -204,7 +281,7 @@ And meantime having fun, learning, hacking, giving back to community &mdash; it'
   <div id="share">
     <h3>Share this post</h3>
     <div class="pane">
-      <a href="http://twitter.com/share?url=http://dev.shopledge.com/2011/02/08/a-mashup-for-inspiration.html" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+      <a href="http://twitter.com/share?url=http://dev.shopledge.com/2011/04/01/a-modern-css-html-style-guide.html" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
       <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like layout="button_count" show_faces="false" width="450"></fb:like>
     </div>  
   </div>
@@ -214,9 +291,9 @@ And meantime having fun, learning, hacking, giving back to community &mdash; it'
     <h3>Related Posts</h3>
     <ul class="posts pane">
       
-        <li><span>01 Apr 2011</span> &raquo; <a href="/2011/04/01/a-modern-css-html-style-guide.html">A Modern CSS/HTML Style Guide</a></li>
-      
         <li><span>13 Mar 2011</span> &raquo; <a href="/2011/03/13/web-designers-vs-developers.html">Web Designers vs. Developers</a></li>
+      
+        <li><span>08 Feb 2011</span> &raquo; <a href="/2011/02/08/a-mashup-for-inspiration.html">A Mashup For Inspiration</a></li>
       
         <li><span>13 Jan 2011</span> &raquo; <a href="/2011/01/13/responsive-web-design.html">Responsive Web Design</a></li>
       
@@ -231,8 +308,8 @@ And meantime having fun, learning, hacking, giving back to community &mdash; it'
           var disqus_shortname = 'shopledgedev'; // required: replace example with your forum shortname
 
           // The following are highly recommended additional parameters. Remove the slashes in front to use.
-          var disqus_identifier = '/2011/02/08/a-mashup-for-inspiration';
-          var disqus_url = 'http://dev.shopledge.com' + '/2011/02/08/a-mashup-for-inspiration.html';
+          var disqus_identifier = '/2011/04/01/a-modern-css-html-style-guide';
+          var disqus_url = 'http://dev.shopledge.com' + '/2011/04/01/a-modern-css-html-style-guide.html';
 
           /* * * DON'T EDIT BELOW THIS LINE * * */
           (function() {

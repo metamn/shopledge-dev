@@ -1,0 +1,191 @@
+---
+id: 20110313
+layout: post
+title: Web Designers vs. Developers
+date: 13 March 2011
+tags:
+  - design
+  - development
+  - frameworks
+  - best practices
+  - ecosystems
+  - principles
+  - tools
+  - hero
+excerpt: Writing and maintaing code in HTML/CSS is painful. Designers should learn from peers like Ruby developers who enjoy every part of it.
+links:
+  # 0
+  - title: Amazon Mechanical Turk
+    url: https://www.mturk.com/mturk/welcome
+  # 1
+  - title: The Ruby Programming Language
+    url: http://www.ruby-lang.org/
+  # 2
+  - title: The Ruby on Rails Web Development Ecosystem
+    url: http://rubyonrails.org/ 
+images:
+  # 0
+  - title: A Bug In Webkit Browsers
+    url: webkit-bug.png 
+no-images-on-frontpage: true
+---
+
+<h2>Design Is Way Harder Than Development</h2>
+<p>
+  Writing programs &mdash; in Ruby, PHP, Javascript, etc. &mdash; and designing web sites with
+  HTML, CSS and templating languages like Liquid is not the same thing, at all.
+</p>
+
+<p>
+  Programming languages are older and more advanced than markup and styling languages. They focus on data,
+  not humans as in case of web design.
+</p>
+<p>
+  Manipulating code bits living in an abstract but uniform environment &mdash; like the computer &mdash; is easier than 
+  manipulating pixels living in the perception of humans, millions of them and all different.
+</p>
+
+<p>
+  Code and data runs in virtual machines, standard environments when displays vary from mobile handsets to large 
+  projector screens, and, web sites are rendered by many different browsers.
+</p>
+
+<p>
+  Web design is like shooting on moving target; programming, well, is stable, testable, more straightforward.
+</p>
+  
+
+<h2>Tools And Best Practices From Programmers To Web Designers</h2>
+<p>
+  Yes, you can do it.
+</p>  
+
+<p>
+  You'll never have that advanced ecosystem a programming language is equipped with: automated tests,
+  intelligent debugger & performance analyser, code coverage tool, documentation generator, frameworks built
+  on frameworks, and all.
+</p>
+
+<p>
+  But you can re-use the <em>principles</em> of creating good code in web design, and, you can adapt some of the 
+  <em>tools</em> programmers use. 
+</p>
+<p>
+  A good starting point for analysis could be the 
+  <a href="{{ page.links[1].url }}" title="{{ page.links[1].title }}">Ruby programming language</a> and the 
+  <a href="{{ page.links[2].url }}" title="{{ page.links[2].title }}">Ruby on Rails web development platform</a>, 
+  probably the best tools of the moment for creating web applications:
+</p>
+  
+<h3>1. Human Friendly Code</h3>
+<p>
+  Ruby was created / optimised for developers, not the machine.
+</p>  
+<p>
+  Programming with Ruby is very straightforward today, the language constructs are so close
+  to plain English even a child can understood and use them. 
+</p>
+<p>
+  Ruby code needs no documentation &mdash; it is so elegant it documents itself.
+</p>
+
+<p>
+&mdash;
+</p>
+
+<p>
+  As a first lesson try to create human friendly, readable, understandable design code which documents itself. 
+</p>
+<p>
+  Make your design your friend. Changing, editing, reviewing, enhancing, extending a Ruby code is always a joy.
+  In contrast, your HTML or CSS code will suck after a while even for you, the creator.
+</p>
+<p class="summary">
+  The biggest challenge in web design is to integrate, by innovative and meticulous naming technique the HTML, CSS and Javascript 
+  elements into a seamlessly co-working entity. 
+</p>
+<p>
+  Mark your code in a straightforward, easily rememberable way which works in any context assuring the <em>flow</em>. 
+  So you don't have to look up different source files to find out how to style, or add interaction to an element.  
+</p>
+
+  
+<h3>2. Don't Repeat Yourself</h3>
+<p>
+  Scalability is everything, you know.
+</p>
+<p>
+  This principle turned out to be very strong building the success of the Rails framework.
+</p>
+<p>
+  Rails was created by substracting the essence from a well known, top notch web application (Basecamp) created with Ruby. 
+  All best practices were turned into reusable modules forming the framework itself.
+</p>
+<p>
+  Basecamp, thus Rails was continuously refactored and optimised until all fat was trimmed.
+  The outcome was the simplest and most robust tool which can be reused, again, to create same successful applications
+  in a faster and easier way.
+</p>
+<p>
+  Smart people are maximising the outcome of every work they done. Beside the final product there is always something more
+  &mdash; an enhanced tool- and mindset moving them forward to repeat the same / similar task faster and easier.
+</p> 
+<p>
+  They don't repeat themselves. Instead the tool, the framework, the ecosystem they have <em>extracted</em> repeats and embeds 
+  automagicaly in every following project all the lessons they've previously learned.
+</p>
+<p class="summary">
+  Web design is lacking similar tools and frameworks. Industry best practices are not extracted into a common 
+  knowledge base and then enhanced by a community. Designing for web is not scalable.
+</p>
+
+
+
+<h3>3. Test Driven Design</h3>
+<p>
+  I know it sounds impossible. No test tool can <em>see</em> as human eyes do.
+</p>
+<p>
+  But if developers can do it maybe the designers will be able too.
+</p>
+<p>
+  In an ideal scenario &mdash; you have human friendly design code and a powerful design framework built on your best
+  knowledge &mdash; you have a strong HTML/CSS/Javascript base at disposal whenever you start a new project.
+</p>
+<p>
+  This framework in order to be perfect must be tested on various browsers, operating systems, display sizes, color depths 
+  and so on.
+  No testing tool will warn you on bugs like in Webkit if you add newline in your source code for a link the design will broke.
+
+  <script src="https://gist.github.com/867212.js?file=button-webkit.html"></script>
+  
+  This will cause the following broken button on Webkit browsers (on Firefox all is fine):
+  <br/><br/>
+  <img src="/images/{{ page.images[0].url }}" alt="{{ page.images[0].title }}" />
+</p>
+
+<p class="summary">
+  Enter <a href="{{ page.links[0].url }}" title="{{ page.links[0].title }}">Amazon's Mechanical Turk</a>. If web designers would unite into a community distilling the best practices into a framework
+  using human test power all elements of that framework would be tested, bullet proof, for all browsers and operating systems 
+  for nothing.
+</p>
+
+
+
+<h2>And the tl;dr</h2>
+<p>
+  Web designers (HTML/CSS programmers) should learn from their developer brothers (coding in Ruby, Python etc.) to make
+  designing more enjoyable, more bullet-proof and widely sustained.  
+</p>
+<p>
+  The current web designer elite shares some thoughts on best practices, a few boilerplate code but there are no frameworks
+  and ecosystems like in development which creates power both for its creators and users.
+</p>
+<p class='summary'>
+  Both principles and tools can be borrowed / adapted from developers &mdash; what we only need is a charismatic leader
+  to become a hero.
+</p>
+
+
+  
+  
